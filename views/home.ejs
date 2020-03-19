@@ -1,0 +1,114 @@
+<html>
+    <head>
+    <title>
+       <%= tittle %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="./home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/efd8189c29.js" crossorigin="anonymous"></script>
+    <meta name="viewport"content="width"=device-width,initial-scale=1,minimum scale=1">
+     <style> 
+   /*the code for the description bar input*/
+input[type=text] {
+  width: 280px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+    <!-- the heading section -->
+    <div id="heading">
+    </div>
+
+     <!-- form to create the task -->
+    <form action="/create-task" method="POST">
+        
+    <!-- div to create the whole new  task -->
+    <div id="new-task">
+        
+    <!-- the description section -->
+    <div id="description">
+      
+            <label for="text">Description</label><br>
+
+            <!-- the description box will increase in size while hovering on it -->
+            <input type="text" id="description1" name="description" placeholder="what do you want to do?" required><br><br>
+        
+          </div>
+
+          <!-- the catgory section -->
+          <div id="category">
+            <label for="text">Category</label><br>
+                <select id="category1" name="category" required>
+                    <option value="public">public</option>
+                    <option value="personal">personal</option>
+                    <option value="work">work</option>
+                    <option value="school">school</option>
+                    <option value="school">cleaning</option>
+                  </select>
+    </div>
+
+    <!-- the date section -->
+    <div id="date">
+        <label for="date">Due date</label><br>
+        <input type="date" id="date1" name="date" placeholder=" choose the date" required>
+    </div>
+
+    </div>
+
+    <!-- the buttons to add the task -->
+    <div id ="add-button">
+        <button  class="button" type="submit" value="Submit"><i class="fas fa-plus-square">Add the task</i></button>
+        </form>
+      </div>
+
+    
+
+    <!-- the new added task section -->
+    <div id="task-container">
+
+      <!-- the form actioon for getting the deleted task -->
+        <form action="/delete-task" method="GET">
+
+<!-- the task list heading -->
+      <div id="task-heading">
+        <img src="https://basecamp.com/assets/extras/mr-todo-4f8bea5ae91ed622987aa49397ea57d6e7ce64a3a9c9441059eb51b8bd6de4de.png" width="70px";height="70px";>
+         <h1>Tasks-list</h1>
+        </div>
+
+      <!-- the delete button -->
+          <button class="button1" type="submit" value="Submit"><i class="fas fa-trash">Delete the task</i></button>
+              
+          <% for(let i of todo) { %>
+                    
+                        <!-- new added tasks list -->
+                    <div id="tasks-list">
+                         
+                        <input type="checkbox" name="<%= i._id %>" >
+                        <p id="task-description"><%= i.description %></p>
+                        <p id="task-category">Category: <%= i.category %></p>
+                        <p id="due-date">Due Date: <%= i.date %></p>
+
+                    </div>
+
+                <% } %>
+                    
+                  
+                </div> 
+    </form>
+    </div>
+</body>

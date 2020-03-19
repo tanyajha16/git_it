@@ -1,0 +1,259 @@
+
+/* the background image added in the body */
+body
+{
+   background-image:url(https://cdn1.vectorstock.com/i/1000x1000/13/40/todo-list-seamless-pattern-universal-background-vector-7561340.jpg);
+}
+
+
+
+/* the heading section */
+#heading
+{
+    text-align:center;
+    font-size:2 rem;
+    font-family:sans-sarif;
+    font-weight:bold;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfsXRh6RZ2xQgeNQnif9GwI-WiWQQFV1LPHG-DGrCH4H7R27zt);
+    width:100%;
+    height:80px;
+    position:sticky;
+    margin:5px;
+}
+
+
+/* the heading for the description part */
+#description
+{
+    position:relative;
+    width:100%;
+    height:30px;
+    top:20%;
+    font-size:1.5rem;
+    width:40%;
+    height:30px;
+    left:2%;
+    font-weight:bold;
+}
+
+/* the  text-area-description section of the description part */
+#description1
+{
+    font-size:1.3rem;
+    background-color:black;
+    color:white;
+    height:50px;
+}
+
+/* the date section */
+#date
+{
+    position:absolute;
+    font-weight:bold;
+    width:40%;
+    left:2%;
+    top:25%;
+    height:50px;
+    font-size:1.5rem;
+    display:inline-block;
+
+}
+
+/* the date entry part of the date */
+#date1
+{
+    font-size:1.4rem;
+    width:40%;
+    height:30px;
+}
+
+/* the category heading section */
+#category
+{
+    position:absolute;
+    font-weight:bold;
+    width:50%;
+    left:40%;
+    top:25%;
+    height:30px;
+    font-size:1.4rem;
+    display:inline-block;
+}
+
+/* the text-area of the category section */
+#category1
+{
+    font-size:1.4rem;
+    width:40%;
+    height:30px;
+
+}
+
+/* the dropdown sextion of the category section */
+#category1 option
+{
+    background-color:cyan;
+}
+
+/* the button section for adding the task */
+.button 
+{
+    position:relative;
+    width:300px;
+    height:80px;
+    background-color:red;
+    color:black;
+    font-size:1.2rem;
+    top:150px;
+    left:30%;
+    font-family:sans-serif;
+    font-weight:bold;
+
+}
+
+/* the font size of the fontawsome addition of the task */
+.button i
+{
+    font-size:1.5rem;
+
+}
+
+/* the deletion button design */
+.button1
+{
+    position:relative;
+    width:300px;
+    height:80px;
+    background-color:purple;
+    color:black;
+    font-size:1.2rem;
+    /* top:200px; */
+    left:30%;
+    font-family: sans-serif;
+    font-weight:bold;
+
+}
+
+/* the delete button fontawsome icon */
+.button1 i
+{
+    font-size:1.5rem;
+
+}
+
+/* the addition button hover design */
+.button:hover
+{
+    transform: scale(1.1);
+    background-color:black;
+    color:white;
+   border-radius:50%;
+   box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+/* the delete button hover design */
+.button1:hover
+{
+    transform: scale(1.1);
+    background-color:black;
+    color:white;
+   border-radius:50%;
+   box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+
+
+/* added tasks container div */
+#task-container{
+
+    position: absolute;
+    top: 60%;
+    width: 100%;
+
+}
+
+ /* added tasks list */
+#tasks-list{
+
+    margin-left:30px;
+    margin-right: 20px;
+    border-bottom: 2px dashed black;
+
+}
+
+    /* checkbox to select the tasks for deletion */
+#tasks-list input{
+
+    display: inline-block;
+}
+
+/* to increase the size of the checkbox */
+input[type=checkbox]
+{
+    transform:scale(2);
+    -ms-transform:scale(2);
+    -webkit-transform:scale(2);
+    padding:10px;
+}
+
+/* the new task added description */
+#task-description{
+
+    font-size: 1.5rem; 
+    line-height: 0px;
+    display:inline-block; 
+    position:relative;
+    left:2%;
+    top:70%;
+    color:navy;
+    font-weight:bold;
+
+}
+
+/* the new task added category */
+#task-category{
+
+    font-size:1.4rem;
+    position:relative;
+    display:inline-block;
+    left:60%;
+    top:70%;
+    color:navy;
+    font-weight:bold;
+}
+
+/* the new task added date */
+#due-date{
+
+    font-size:1.2rem;
+    font-weight:bold;
+    color:navy;
+
+}
+
+ /* style on hover  of the checkbox*/
+#tasks-list:hover{
+
+    color: brown;
+
+}
+/* the task-heading design section */
+#task-heading img
+{ 
+    display:inline-block;
+    position:relative;
+    left:2%;    
+
+}
+
+/* the task-list heading has an image and adjusting the image and h1 tag */
+#task-heading img:hover{
+    transform: scale(1.2);
+}
+
+#task-heading h1{
+    display:inline-block;
+     width:40%;
+     left:7%;
+     position:absolute;
+}
